@@ -1,0 +1,63 @@
+// base
+@import "base/variables";
+@import "base/mixins";
+@import "base/base";
+@import "base/typo";
+
+// vendor css
+@import "vendor/vendor";
+
+// Your css
+@import "layout/style";
+
+main {
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../img/bg_filler.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section_filler {
+  font-family: $font_text;
+  background-color: #ffffff;
+  width: 691px;
+  height: 691px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  color: $color_title;
+  margin-bottom: 74px;
+  & > img {
+    margin-bottom: 24px;
+  }
+  & > span {
+    @include font-size(19px);
+  }
+}
+
+.links {
+  p {
+    margin-bottom: 5px;
+    & > span {
+      padding: 0 10px;
+    }
+  }
+}
+
+@media screen and (max-height: 800px) {
+  .section_filler {
+    width: 590px;
+    height: 590px;
+  }
+}

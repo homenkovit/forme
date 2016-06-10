@@ -1,0 +1,19 @@
+h1 {
+  @include font-size(52px);
+  letter-spacing: -2px;
+  line-height: 56px;
+  text-transform: uppercase;
+  & > span {
+    font-family: $font_title;
+  }
+}
+
+a {
+  color: $color_link;
+  font-size: 19px;
+  text-decoration: underline;
+  &.tel {
+    color: $color_text;
+    text-decoration: none;
+  }
+}
